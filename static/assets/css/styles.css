@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
+/* font-family:  */
+
+/* ====================== VARIABLES CSS ======================= */
+:root {
+    --header-height: 3.5rem;
+    
+    /* ================== Colors ============================ */
+    /* Color mode HSL (hue, saturations, lightness */
+    --title-color: hsl(0,0%,100%);
+    --text-color: hsl(0,0%,60%);
+    --body-color:hsl(0,0%,0%);
+
+    /* ================== Font and Typography ================= */
+    --body-font: "Afacad Flux", sans-serif;
+    --h1-font-size:1.5rem;
+    --h3-font-size:1rem;
+    --normal-font-size:1rem;
+    --small-font-size:.813rem;
+
+    /* ================= Font Weight ========================== */
+    --font-regular: 400;
+    --font-semi-bold:600;
+    --font-bold: 700;
+
+    /* ================= z-index ============================== */
+    --z-tooltip:10;
+    --z-fixed:100;
+}
+
+/* ===================== Responsive Topography ================ */
+@media screem and (min-width: 1152px){
+    :root{
+        --h1-font-size: 2.25rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+    }
+}
+
+/* ===================== Base ================================ */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ========================== Reusable CSS Classes ========================*/
+.container {
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+
+.main{
+    overflow: hidden;
+}
+
+/* ========================= Header & Nav ================================ */
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--body-color);
+    border-bottom: 1px solid var(--text-color);
+    z-index: var(--z-fixed);
+}
+
+.nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo{
+    color:var(--title-color);
+    font-weight: var(--font-semi-bold);
+    letter-spacing: 3px;
+}
+
+.nav__toggle,
+.nav__close{
+    font-size: 1.25rem;
+    color: var(--title-color);
+    cursor: pointer;
+}
+
+/* Navigation for mobile devices */
+@media screen and (max-width:1023px){
+    .nav__menu{
+        position: fixed;
+        top: -100%;
+        left: 0;
+        background-color: var(--body-color);
+        border-bottom: 1px solid var(--text-color);
+        width: 100%;
+        padding-block: 4.5rem 3.5rem ;
+        transition: top .4s;
+    }
+}
+
+.nav__list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    text-align: center;
+}
+
+.nav__link{
+    color: var(--text-color);
+    font-weight: var(--font-semi-bold);
+    letter-spacing: 3px;
+    transition: color .3s;
+}
+
+.nav__link:hover{
+    color: var(--title-color);
+}
+
+.nav__social{
+    display: flex;
+    justify-content: center;
+    column-gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.nav__social-link{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    transition: color .4s;
+}
+
+.nav__social-link:hover{
+    color:var(--title-color);
+
+}
+
+.nav__close{
+    position: absolute;
+    top: 1.15rem;
+    right: 1.5rem;
+}
+
+/* Show Menu */
+.show-menu{
+    top: 0;
+}
