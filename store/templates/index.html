@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
 
     <!-- ========================= SWIPER CSS ============================ -->
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/static/assets/css/swiper-bundle.min.css">
 
     <!-- ========================= CSS ================================== -->
     <link rel="stylesheet" href="/static/assets/css/styles.css">
@@ -71,8 +71,80 @@
     </header>
 
 
+    <!-- ======================== Main =================================== -->
+    <main class="main">
+        <!-- ========================== Home ============================= -->
+         <section class="home">
+            <div class="home__container container">
+                <div class="home__data">
+                    <div class="home__content">
+                        <div class="home__stars">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-line"></i>
+                        </div>
 
-        <!-- =====================JavaScript========================= -->
-        <script src="/static/assets/js/main.js"></script>
+                        <h1 class="home__title">
+                            Premerior <br>
+                            Watches <br>
+                            Collection
+                        </h1>
+
+                        <h3 class="home__price">$500</h3>
+                    </div>
+                    
+                    <a href="#" class="home__button">
+                        ADD TO CART
+                        <i class="ri-arrow-right-s-line"></i>
+                    </a>
+                </div>
+
+                <div class="home__images">
+                    <div class="home__swiper swiper">
+                        <div class="swiper-wrapper">
+                            <article class="home__article swiper-slide">
+                                <img src="/static/assets/img/watches-1.png" alt="image" class="home__img">
+                            </article>
+
+                            <article class="home__article swiper-slide">
+                                <img src="/static/assets/img/watches-2.png" alt="image" class="home__img">
+                            </article>
+
+                            <article class="home__article swiper-slide">
+                                <img src="/static/assets/img/watches-3.png" alt="image" class="home__img">
+                            </article>
+                        </div>
+                    </div>
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <div class="home__info">
+                    <img src="/static/assets/img/watches-border.png" alt="image" class="home__info-img">
+
+                    <div class="home__info-content">
+                        <p class="home__info-description">
+                            Personalize your watch with a message that will last a lifetime. The perfect gift for you or someone special.
+                        </p>
+
+                        <a href="#" class="home__button-link">LEARN MORE</a>
+                    </div>
+                </div>
+            </div>
+         </section>
+    </main>
+
+    <!-- =============================== GSAP ================================= -->
+    <script src="/static/assets/js/gsap.min.js"></script>
+
+
+    <!-- =============================== SWIPER JS ============================= -->
+    <script src="/static/assets/js/swiper-bundle.min.js"></script>
+
+
+    <!-- =====================JavaScript========================= -->
+    <script src="/static/assets/js/main.js"></script>
 </body>
 </html>
