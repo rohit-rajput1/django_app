@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,18 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- ========================= FAVICON ============================ -->
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static '/assets/favicon.png' %}" type="image/x-icon">
 
     <!-- ========================= REMIXICONS ============================ -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
 
     <!-- ========================= SWIPER CSS ============================ -->
-    <link rel="stylesheet" href="/static/assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/static/css/swiper-bundle.min.css">
 
     <!-- ========================= CSS ================================== -->
-    <link rel="stylesheet" href="/static/assets/css/styles.css">
+    <link rel="stylesheet" href="{% static '/css/styles.css'%}">
 
-    <title>Exclusive Watches</title>
+    <title>WATCHES</title>
 </head>
 <body>
     <!-- ======================== Header =================================== -->
@@ -137,14 +139,14 @@
     </main>
 
     <!-- =============================== GSAP ================================= -->
-    <script src="/static/assets/js/gsap.min.js"></script>
+    <script src="/static/js/gsap.min.js"></script>
 
 
     <!-- =============================== SWIPER JS ============================= -->
-    <script src="/static/assets/js/swiper-bundle.min.js"></script>
+    <script src="/static/js/swiper-bundle.min.js"></script>
 
 
     <!-- =====================JavaScript========================= -->
-    <script src="/static/assets/js/main.js"></script>
+    <script src="{% static '/js/main.js' %}"></script>
 </body>
 </html>
