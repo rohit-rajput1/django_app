@@ -140,15 +140,31 @@
         <h1 class="related-product">Related Products</h1>
         <div class="container card-container">
             {% for product in products %}
-           <!-- Card 1 -->
-            <div class="card">
-                <img src="{{ product.image.url }}" class="card-img-top" alt="Card Image">
-                <div class="card-body">
-                    <h5 class="card-title">{{product.name}}</h5>
-                    <p class="card-text">{{product.price}}</p>
-                    <a href="#" class="btn btn-primary">View options</a>
-                </div>
-            </div>
+                {% if product.is_sale %}
+                    <div class="card">
+                        <!-- Sale Badge -->
+                        <div class="badge position-absolute" style="top: 0.5rem; right: 0.5rem; background-color: rgba(39, 37, 37, 0.451); color: red; font-size: 1.15rem; padding: 0.3rem 1.5rem;">
+                        <b>Sale!!!</b>                    
+                        </div>
+                        <!-- Product Body -->
+                        <img src="{{ product.image.url }}" class="card-img-top" alt="Card Image">
+                        <div class="card-body">
+                            <h5 class="card-title">{{product.name}}</h5>
+                            <p class="card-text"> <strike>${{product.price}}</strike> &nbsp; ${{product.sale_price}}</p>
+                            <a href="#" class="btn btn-primary">View options</a>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="card">
+                        <!-- Product Body -->
+                        <img src="{{ product.image.url }}" class="card-img-top" alt="Card Image">
+                        <div class="card-body">
+                            <h5 class="card-title">{{product.name}}</h5>
+                            <p class="card-text">{{product.price}}</p>
+                            <a href="#" class="btn btn-primary">View options</a>
+                        </div>
+                    </div>
+                {% endif %}
             {% endfor %}
         </div>
     </main>
