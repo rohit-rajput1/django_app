@@ -1,183 +1,91 @@
-{% load static %}
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- ========================= FAVICON ============================ -->
-    <link rel="shortcut icon" href="{% static '/assets/favicon.png' %}" type="image/x-icon">
-
-    <!-- ========================= REMIXICONS ============================ -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
-
-    <!-- ========================= SWIPER CSS ============================ -->
-    <link rel="stylesheet" href="/static/css/swiper-bundle.min.css">
-
-    <!-- ========================= CSS ================================== -->
-    <link rel="stylesheet" href="{% static '/css/styles.css'%}">
-
-    <title>WATCHES</title>
-</head>
-<body>
-    <!-- ======================== Header =================================== -->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">WATCHES</a>
-
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">HOME</a>
-                    </li>
-                    
-                    <li class="nav__item"></li>
-                        <a href="#" class="nav__link">ABOUT</a>
-                    </li>
-
-                    <li class="nav__item"></li>
-                        <a href="#" class="nav__link">FEATURED</a>
-                    </li>
-
-                    <li class="nav__item"></li>
-                        <a href="#" class="nav__link">NEW</a>
-                    </li>
-                </ul>
-
-                <div class="nav__social">
-                    <a href="www.facebook.com" target="_blank" class="nav__social-link">
-                        <i class="ri-facebook-box-fill"></i>
-                    </a>
-
-                    <a href="www.instagram.com" target="_blank" class="nav__social-link">
-                        <i class="ri-instagram-fill"></i>
-                    </a>
-
-                    <a href="www.x.com" target="_blank" class="nav__social-link">
-                        <i class="ri-twitter-fill"></i>
-                    </a>
+{% block content %}
+<!-- ======================== Main =================================== -->
+<main class="main">
+    <!-- ========================== Home ============================= -->
+     <section class="home">
+        <div class="home__container container">
+            <div class="home__data">
+                <div class="home__content">
+                    <div class="home__stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-line"></i>
+                    </div>
+                    <h1 class="home__title">
+                        Premerior <br>
+                        Watches <br>
+                        Collection
+                    </h1>
+                    <h3 class="home__price">$500</h3>
                 </div>
-
-                <!-- Close Button -->
-                 <div class="nav__close" id="nav-close">
-                    <i class="ri-close-line"></i>
-                 </div>
+                
+                <a href="#" class="home__button">
+                    ADD TO CART
+                    <i class="ri-arrow-right-s-line"></i>
+                </a>
             </div>
-
-            <!-- Toggle -->
-             <div class="nav__toggle" id="nav-toggle">
-                <i class="ri-menu-line"></i>
-             </div>
-        </nav>
-    </header>
-
-
-    <!-- ======================== Main =================================== -->
-    <main class="main">
-        <!-- ========================== Home ============================= -->
-         <section class="home">
-            <div class="home__container container">
-                <div class="home__data">
-                    <div class="home__content">
-                        <div class="home__stars">
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-half-line"></i>
-                        </div>
-
-                        <h1 class="home__title">
-                            Premerior <br>
-                            Watches <br>
-                            Collection
-                        </h1>
-
-                        <h3 class="home__price">$500</h3>
+            <div class="home__images">
+                <div class="home__swiper swiper">
+                    <div class="swiper-wrapper">
+                        <article class="home__article swiper-slide">
+                            <img src="{% static '/img/watches-1.png' %}" alt="image" class="home__img">
+                        </article>
+                        <article class="home__article swiper-slide">
+                            <img src="{% static '/img/watches-2.png' %}" alt="image" class="home__img">
+                        </article>
+                        <article class="home__article swiper-slide">
+                            <img src="{% static '/img/watches-3.png' %}" alt="image" class="home__img">
+                        </article>
                     </div>
-                    
-                    <a href="#" class="home__button">
-                        ADD TO CART
-                        <i class="ri-arrow-right-s-line"></i>
-                    </a>
                 </div>
-
-                <div class="home__images">
-                    <div class="home__swiper swiper">
-                        <div class="swiper-wrapper">
-                            <article class="home__article swiper-slide">
-                                <img src="{% static '/img/watches-1.png' %}" alt="image" class="home__img">
-                            </article>
-
-                            <article class="home__article swiper-slide">
-                                <img src="{% static '/img/watches-2.png' %}" alt="image" class="home__img">
-                            </article>
-
-                            <article class="home__article swiper-slide">
-                                <img src="{% static '/img/watches-3.png' %}" alt="image" class="home__img">
-                            </article>
-                        </div>
-                    </div>
-                    <!-- Pagination -->
-                    <div class="swiper-pagination"></div>
-                </div>
-
-                <div class="home__info">
-                    <img src="{% static '/img/watches-border.png' %}" alt="image" class="home__info-img">
-
-                    <div class="home__info-content">
-                        <p class="home__info-description">
-                            Personalize your watch with a message that will last a lifetime. The perfect gift for you or someone special.
-                        </p>
-
-                        <a href="#" class="home__button-link">LEARN MORE</a>
-                    </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="home__info">
+                <img src="{% static '/img/watches-border.png' %}" alt="image" class="home__info-img">
+                <div class="home__info-content">
+                    <p class="home__info-description">
+                        Personalize your watch with a message that will last a lifetime. The perfect gift for you or someone special.
+                    </p>
+                    <a href="#" class="home__button-link">LEARN MORE</a>
                 </div>
             </div>
-         </section>
-        <!-- ========================= CARD CONTAINER ============================== -->
-        <h1 class="related-product">Related Products</h1>
-        <div class="container card-container">
-            {% for product in products %}
-                {% if product.is_sale %}
-                    <div class="card">
-                        <!-- Sale Badge -->
-                        <div class="badge position-absolute" style="top: 0.5rem; right: 0.5rem; background-color: rgba(39, 37, 37, 0.451); color: red; font-size: 1.15rem; padding: 0.3rem 1.5rem;">
-                        <b>Sale!!!</b>                    
-                        </div>
-                        <!-- Product Body -->
-                        <img src="{{ product.image.url }}" class="card-img-top" alt="Card Image">
-                        <div class="card-body">
-                            <h5 class="card-title">{{product.name}}</h5>
-                            <p class="card-text"> <strike>${{product.price}}</strike> &nbsp; ${{product.sale_price}}</p>
-                            <a href="#" class="btn btn-primary">View options</a>
-                        </div>
-                    </div>
-                {% else %}
-                    <div class="card">
-                        <!-- Product Body -->
-                        <img src="{{ product.image.url }}" class="card-img-top" alt="Card Image">
-                        <div class="card-body">
-                            <h5 class="card-title">{{product.name}}</h5>
-                            <p class="card-text">{{product.price}}</p>
-                            <a href="#" class="btn btn-primary">View options</a>
-                        </div>
-                    </div>
-                {% endif %}
-            {% endfor %}
         </div>
-    </main>
-
-    <!-- =============================== GSAP ================================= -->
-    <script src="/static/js/gsap.min.js"></script>
-
-
-    <!-- =============================== SWIPER JS ============================= -->
-    <script src="/static/js/swiper-bundle.min.js"></script>
-
-
-    <!-- =====================JavaScript========================= -->
-    <script src="{% static '/js/main.js' %}"></script>
-</body>
-</html>
+     </section>
+    <!-- ========================= CARD CONTAINER ============================== -->
+    <h1 class="related-product">Related Products</h1>
+    <div class="container card-container">
+        {% for product in products %}
+            {% if product.is_sale %}
+                <div class="card">
+                    <!-- Sale Badge -->
+                    <div class="badge position-absolute" style="top: 0.5rem; right: 0.5rem; background-color: rgba(39, 37, 37, 0.451); color: red; font-size: 1.15rem; padding: 0.3rem 1.5rem;">
+                    <b>Sale!!!</b>                    
+                    </div>
+                    <!-- Product Body -->
+                    <img src="{{ product.image.url }}" class="card-img-top" alt="Card Image">
+                    <div class="card-body">
+                        <h5 class="card-title">{{product.name}}</h5>
+                        <p class="card-text"> <strike>${{product.price}}</strike> &nbsp; ${{product.sale_price}}</p>
+                        <a href="#" class="btn btn-primary">View options</a>
+                    </div>
+                </div>
+            {% else %}
+                <div class="card">
+                    <!-- Product Body -->
+                    <img src="{{ product.image.url }}" class="card-img-top" alt="Card Image">
+                    <div class="card-body">
+                        <h5 class="card-title">{{product.name}}</h5>
+                        <p class="card-text">{{product.price}}</p>
+                        <a href="#" class="btn btn-primary">View options</a>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</main>
+{% endblock %}
