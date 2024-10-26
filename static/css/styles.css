@@ -375,6 +375,51 @@ img{
     }
 }
 
+/* ========================= About Page Styling ============================== */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    min-height: 70vh;
+}
+
+.about-content {
+    position: relative;
+    padding: 2rem;
+    background-color: var(--body-color);
+    color: var(--text-color);
+    font-size: var(--normal-font-size);
+    border: 2px dashed var(--text-color); /* Cutout border effect */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.about-content:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02); /* Slight zoom on hover */
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--title-color);
+}
+
+@media screen and (max-width: 768px) {
+    .about-content {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .about-content {
+        padding: 1rem;
+    }
+}
+
+
 /* ====================== Scroll Bar =============================== */
 ::-webkit-scrollbar{
     width: .6rem;
