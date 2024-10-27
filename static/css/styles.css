@@ -380,25 +380,25 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0;
+    padding: 4rem 2rem;
     min-height: 70vh;
 }
 
 .about-content {
     position: relative;
-    padding: 2rem;
+    padding: 4rem;
     background-color: var(--body-color);
     color: var(--text-color);
     font-size: var(--normal-font-size);
-    border: 2px dashed var(--text-color); /* Cutout border effect */
+    border: 4px dashed var(--text-color); /* Cutout border effect */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s, transform 0.3s;
 }
 
 .about-content:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0 16px px rgba(0, 0, 0, 0.2);
+    transform: scale(1.5); /* Slight zoom on hover */
 }
 
 .about-header {
