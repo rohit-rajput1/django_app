@@ -1,14 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
+
+<!-- Add space between the header and the top of the page -->
 <br><br><br><br><br>
+
+<!-- Header Section -->
 <header class="bg-dark py-5">
     <div class="container px-4 px-lg-5 my-5">
-        <div class="text-center text-white">
-            <h1 class="display-4 fw-bolder">About Watches</h1>
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="text-center text-white">
+                <h1 class="home__title display-3 fw-bolder">About Watches</h1> <!-- Using home__title class -->
+            </div>
         </div>
     </div>
 </header>
-<br><br>
+<br>
+<!-- About Section -->
 <div class="container about-container">
     <div class="about-content">
         <p>
@@ -17,52 +24,43 @@
             Whether you’re a seasoned collector or just starting your journey into the world of horology, we offer pieces that reflect the 
             artistry and precision of a bygone era.
         </p>
+
         <br>
-        <p>We believe that a watch is more than just an accessory—it’s a symbol of history, individuality, and personal style. 
+
+        <p>
+            We believe that a watch is more than just an accessory—it’s a symbol of history, individuality, and personal style. 
             Every watch in our selection is carefully inspected and authenticated, ensuring that our customers receive nothing 
             but the finest examples of horological mastery. From limited editions to discontinued models, we strive to connect 
             enthusiasts with the unique and hard-to-find treasures they seek.
         </p>
+
         <br><br>
-        <h2>Why Choose Us?</h2>
+
+        <h3 class="fs-3">Why Choose Us?</h3>
         <br>
         <ul>
-            <li>
-                <strong>- Exquisite Collection:</strong> We feature rare timepieces from renowned brands, each chosen for its craftsmanship and legacy.
-            </li>
-
-            <li>
-                <strong>- Authenticity Guaranteed:</strong> Every watch is carefully inspected and authenticated by experts to ensure originality.
-            </li>
-
-            <li>
-                <strong>- Unique Finds:</strong> Discover limited editions, discontinued models, and rare treasures that are hard to find elsewhere.
-            </li>
-
-            <li>
-                <strong>- Passion for Horology:</strong> Whether you are a collector or enthusiast, we offer pieces that tell stories of time and precision.
-            </li>
-
-            <li>
-                <strong>- Trust and Transparency:</strong> We value trust with our customers and ensure every transaction reflects integrity and honesty.
-            </li>
-
-            <li>
-                <strong>- Personalized Service:</strong> Our team is dedicated to helping you find the perfect watch that resonates with your personal style.
-            </li>
+            <li><strong>- Exquisite Collection:</strong> Rare timepieces from renowned brands chosen for craftsmanship and legacy.</li>
+            <li><strong>- Authenticity Guaranteed:</strong> Carefully inspected and authenticated by experts.</li>
+            <li><strong>- Unique Finds:</strong> Discover limited editions, discontinued models, and rare treasures.</li>
+            <li><strong>- Passion for Horology:</strong> Pieces that tell stories of time and precision.</li>
+            <li><strong>- Trust and Transparency:</strong> Ensuring transactions reflect integrity and honesty.</li>
+            <li><strong>- Personalized Service:</strong> Helping you find a watch that resonates with your personal style.</li>
         </ul>
+
         <br><br>
-        <h2>Our Mission</h2>
+
+        <h3 class="fs-3">Our Mission</h3>
         <br>
         <p>
             At the heart of our mission is a dedication to trust, transparency, and passion. We pride ourselves on delivering an 
             exceptional customer experience, helping collectors find pieces that resonate with them on a deeper level.
         </p>
+        <br>
         <p>
             Explore our collection and discover the charm and legacy of owning a truly remarkable watch. Each timepiece offers 
             more than just time—it tells a story of artistry, precision, and individuality.
         </p>
-        
     </div>
 </div>
+
 {% endblock %}
