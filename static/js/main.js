@@ -58,3 +58,11 @@ const swiperWatches = new Swiper('.home__swiper', {
 gsap.from('.home__images',1.5,{opacity:0,y:150,delay:.1})
 gsap.from('.home__data',1.8,{opacity:0,x:-100,delay:.8})
 gsap.from('.home__info',1.8,{opacity:0,x:-100,delay:1})
+
+document.querySelector("#show-login").addEventListener("click",function(){
+    document.querySelector(".popup").classList.add("active");
+});
+
+document.querySelector("#.popup .close-btn").addEventListener("click",function(){
+    document.querySelector(".popup").classList.remove("active");
+});
