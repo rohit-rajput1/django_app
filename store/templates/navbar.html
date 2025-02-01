@@ -5,21 +5,29 @@
        <div class="nav__menu" id="nav-menu">
            <ul class="nav__list">
                <li class="nav__item">
-                   <a href="{% url 'home' %}" class="nav__link">HOME</a>
-               </li>
-               
-               <li class="nav__item"></li>
-                   <a href="{% url 'about' %}" class="nav__link">ABOUT</a>
+                   <a href="{% url 'home' %}" class="nav__link">Home</a>
                </li>
                <li class="nav__item"></li>
-                   <a href="#" class="nav__link">FEATURED</a>
+                   <a href="#" class="nav__link">Featured</a>
                </li>
                <li class="nav__item"></li>
-                   <a href="#" class="nav__link">NEW</a>
+                   <a href="#" class="nav__link">New</a>
                </li>
+               <li class="nav__item"></li>
+                   <a href="{% url 'about' %}" class="nav__link">About</a>
+               </li>
+                {% if user.is_authenticated %}
+                    <li class="nav__item"></li>
+                        <a href="{% url 'logout' %}" class="nav__link">Logout</a>
+                    </li>  
+                {% else %}
+                    <li class="nav__item"></li>
+                        <a href="{% url 'login' %}" class="nav__link">Login</a>
+                    </li>
+                {% endif %}
            </ul>
            <div class="nav__social">
-               <a href="www.facebook.com" target="_blank" class="nav__social-link">
+               <!-- <a href="www.facebook.com" target="_blank" class="nav__social-link">
                    <i class="ri-facebook-box-fill"></i>
                </a>
                <a href="www.instagram.com" target="_blank" class="nav__social-link">
@@ -27,7 +35,8 @@
                </a>
                <a href="www.x.com" target="_blank" class="nav__social-link">
                    <i class="ri-twitter-fill"></i>
-               </a>
+               </a> -->
+
            </div>
            <!-- Close Button -->
             <div class="nav__close" id="nav-close">
