@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Afacad Flux", sans-serif;
+        }
+
+        body {
+            /* background-color: #000000; */
+            background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/media/uploads/product/adrien-olichon-gOdavfpH-3s-unsplash.jpg); 
+            /* background-image: url(/media/uploads/product/age-barros-rBPOfVqROzY-unsplash.jpg);  */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .login-card {
+            background: rgb(40, 40, 40);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-header {
+            margin-bottom: 8px;
+        }
+
+        .login-header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .login-header p {
+            color: #ffffff;
+            font-size: 16px;
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            color: #ffffff;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e1e1e1;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #3CB371;
+        }
+
+        .form-group .icon {
+            position: absolute;
+            right: 12px;
+            top: 38px;
+            color: #666;
+        }
+
+        .forgot-link {
+            text-align: right;
+            font-size: 14px;
+        }
+
+        .forgot-link a {
+            color: #ff4444;
+            text-decoration: none;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #3e3cb3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 24px;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-button:hover {
+            background-color: #2e8b57;
+        }
+
+        .bottom-text {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .bottom-text a {
+            color: #3CB371;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <div class="login-header">
+            <h1>LOGIN</h1>
+            <p>Welcome to our Watch Collection</p>
+        </div>
+        <form method="POST" action="{% url 'login' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="username"><b>Username</b></label>
+                <input type="text" id="username" name="username" required placeholder="enter your username">
+                <span class="icon">👤</span>
+            </div>
+            <div class="form-group">
+                <label for="password"><b>Password</b></label>
+                <input type="password" id="password" name="password" required placeholder="enter your password">
+                <span class="icon">🔒</span>
+            </div>
+            <div class="forgot-link">
+                <a href="#">Forgot?</a>
+            </div>
+            <button type="submit" class="login-button">LOGIN</button>
+        </form>
+        <div class="bottom-text">
+            <a href="#">Don't have an account? Click here to join us</a>
+        </div>
+    </div>
+</body>
+{% endblock %}
