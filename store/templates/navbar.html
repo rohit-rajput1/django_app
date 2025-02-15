@@ -4,9 +4,6 @@
        <a href="{% url 'home' %}" class="nav__logo">WATCHES</a>
        <div class="nav__menu" id="nav-menu">
            <ul class="nav__list">
-               <li class="nav__item">
-                   <a href="{% url 'home' %}" class="nav__link">Home</a>
-               </li>
                <li class="nav__item"></li>
                    <a href="#" class="nav__link">Featured</a>
                </li>
@@ -23,6 +20,9 @@
                 {% else %}
                     <li class="nav__item"></li>
                         <a href="{% url 'login' %}" class="nav__link">Login</a>
+                    </li>
+                    <li class="nav__item"></li>
+                        <a href="{% url 'register' %}" class="nav__link">Register</a>
                     </li>
                 {% endif %}
            </ul>
