@@ -125,7 +125,7 @@ img{
 .nav__list{
     display: flex;
     flex-direction: column;
-    row-gap: 2rem;
+    row-gap: 1rem;
     text-align: center;
 }
 
